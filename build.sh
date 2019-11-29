@@ -14,6 +14,7 @@ rm **/*.deb
 build_package core
 build_package dev
 build_package media
+build_package repositories
 build_package util
 
 # Move all debs to a single place
