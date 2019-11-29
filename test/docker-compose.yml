@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  ubuntu:
+    image: amcolash/ubuntu-test
+    container_name: ubuntu
+    build: .
+    volumes:
+      - ../deb:/deb
+      - ./install.sh:/deb/install.sh

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pushd $(dirname "$0")
+
 # Build helper
 function build_package {
   pushd $1
@@ -20,3 +22,5 @@ build_package util
 # Move all debs to a single place
 mkdir -p deb
 mv **/*.deb deb
+
+popd
