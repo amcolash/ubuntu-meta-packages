@@ -59,8 +59,6 @@ echo "deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main" >
 
 # TeamViewer
 curl -L https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
-# echo "deb http://linux.teamviewer.com/deb stable main" > /etc/apt/sources.list.d/teamviewer.list
-
 
 # Have to do this so this matches the package version
 cat > /etc/apt/sources.list.d/teamviewer.list << EOF
@@ -87,6 +85,10 @@ deb http://linux.teamviewer.com/deb stable main
 # deb http://linux.teamviewer.com/deb preview main
 # deb http://linux.teamviewer.com/deb development main
 EOF
+
+# Etcher
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+echo "deb https://deb.etcher.io stable etcher" > /etc/apt/sources.list.d/balena-etcher.list
 
 ############ FINISHING UP ############
 
