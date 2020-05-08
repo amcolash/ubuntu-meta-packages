@@ -8,13 +8,13 @@ echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /et
 
 # Papirus Icon Theme
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9461999446FAF0DF770BFC9AE58A9D36647CAE7F
-echo "deb http://ppa.launchpad.net/papirus/papirus-dev/ubuntu eoan main" > /etc/apt/sources.list.d/papirus.list
+echo "deb http://ppa.launchpad.net/papirus/papirus-dev/ubuntu focal main" > /etc/apt/sources.list.d/papirus.list
 
 ############ DEV ############
 
 # node 12.x
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-echo 'deb https://deb.nodesource.com/node_12.x disco main' > /etc/apt/sources.list.d/nodesource.list
+echo 'deb https://deb.nodesource.com/node_12.x focal main' > /etc/apt/sources.list.d/nodesource.list
 
 # vs code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -24,7 +24,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] http
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable" > /etc/apt/sources.list.d/docker-ce.list
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu eoan stable" > /etc/apt/sources.list.d/docker-ce.list
 
 # android studio
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
@@ -54,7 +54,7 @@ echo "deb-src [arch=amd64,i386] http://repo.steampowered.com/steam/ precise stea
 
 # Arronax
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E53B0E36210D2EDBFA94E8AB5AF549300FEB6DD9
-echo "deb http://ppa.launchpad.net/diesch/stable/ubuntu eoan main" > /etc/apt/sources.list.d/diesch.list
+echo "deb http://ppa.launchpad.net/diesch/stable/ubuntu focal main" > /etc/apt/sources.list.d/diesch.list
 
 # Slack
 curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey | apt-key add -

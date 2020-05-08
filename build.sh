@@ -11,7 +11,7 @@ function build_package {
     echo Changes detected in $1, rebuilding
     equivs-build $1.cfg
 
-    rm ../deb/amcolash*$1*.deb
+    rm -f ../deb/amcolash*$1*.deb
     mv *.deb ../deb/
   else
     echo skipping $1 due to no changes
