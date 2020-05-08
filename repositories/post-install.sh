@@ -33,13 +33,13 @@ echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable" > 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | apt-key add -
 echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify.list
 
-# darktable
-curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_19.10/Release.key | apt-key add -
-echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_19.10/ /" > /etc/apt/sources.list.d/darktable.list
+# darktable for 20.04 not in this repo yet. using from ubuntu repo for now
+# curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_19.10/Release.key | apt-key add -
+# echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_19.10/ /" > /etc/apt/sources.list.d/darktable.list
 
 # mkvtoolnix
 curl -L https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add -
-echo "deb https://mkvtoolnix.download/ubuntu/ eoan main" > /etc/apt/sources.list.d/mkvtoolnix.list
+echo "deb https://mkvtoolnix.download/ubuntu/ focal main" > /etc/apt/sources.list.d/mkvtoolnix.list
 
 # steam
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
