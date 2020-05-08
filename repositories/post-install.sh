@@ -26,6 +26,9 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] http
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable" > /etc/apt/sources.list.d/docker-ce.list
 
+# android studio
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
+echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal main" > /etc/apt/sources.list.d/android-studio.list
 
 ############ MEDIA ############
 

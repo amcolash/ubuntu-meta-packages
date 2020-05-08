@@ -1,16 +1,27 @@
 #!/bin/bash
 
-pushd $(dirname "$0")
+pushd $(dirname "$0") > /dev/null
 
 # Build helper
 function build_package {
-  pushd $1
-  equivs-build $1.cfg
-  popd
+  echo $1
+  echo -----------------------------------------------
+  pushd $1 > /dev/null
+  if [[ `git status --porcelain .` ]]; then
+    echo Changes detected in $1, rebuilding
+    equivs-build $1.cfg
+
+    rm ../deb/amcolash*$1*.deb
+    mv *.deb ../deb/
+  else
+    echo skipping $1 due to no changes
+  fi
+  echo
+  popd > /dev/null
 }
 
-# Remove old packages
-rm **/*.deb
+# Make desitnation if it doesn't exist
+mkdir -p deb
 
 # Build new packages
 build_package core
@@ -19,8 +30,4 @@ build_package media
 build_package repositories
 build_package util
 
-# Move all debs to a single place
-mkdir -p deb
-mv **/*.deb deb
-
-popd
+popd > /dev/null
