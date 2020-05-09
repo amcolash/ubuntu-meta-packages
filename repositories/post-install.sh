@@ -49,6 +49,9 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
 echo "deb [arch=amd64,i386] http://repo.steampowered.com/steam/ precise steam" > /etc/apt/sources.list.d/steam.list
 echo "deb-src [arch=amd64,i386] http://repo.steampowered.com/steam/ precise steam" >> /etc/apt/sources.list.d/steam.list
 
+# High Quality Bluetooth Codecs
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 252843F425723ACAADF94155ABF911E15B285843
+echo "deb http://ppa.launchpad.net/berglh/pulseaudio-a2dp/ubuntu focal main" > /etc/apt/sources.list.d/pulseaudio-a2dp.list
 
 ############ UTIL ############
 
