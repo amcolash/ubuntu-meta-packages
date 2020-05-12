@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # use docker w/o needing root, instead part of the docker group
 if [ ! $(getent group docker) ]; then

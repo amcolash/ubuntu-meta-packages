@@ -29,5 +29,6 @@ build_package dev
 build_package media
 build_package repositories
 build_package util
+build_package ui
 
 popd > /dev/null
