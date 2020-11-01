@@ -26,11 +26,15 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] http
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu eoan stable" > /etc/apt/sources.list.d/docker-ce.list
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/docker-ce.list
+
+# ubuntu make
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2A8F89B722D1D6630348601343FDBC385ADA701F
+echo "deb http://ppa.launchpad.net/lyzardking/ubuntu-make/ubuntu focal main " > /etc/apt/sources.list.d/ubuntu-make.list
 
 # android studio
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
-echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal main" > /etc/apt/sources.list.d/android-studio.list
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
+# echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal main" > /etc/apt/sources.list.d/android-studio.list
 
 ############ MEDIA ############
 
@@ -38,9 +42,9 @@ echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | apt-key add -
 echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify.list
 
-# darktable for 20.04 not in this repo yet. using from ubuntu repo for now
-# curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_19.10/Release.key | apt-key add -
-# echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_19.10/ /" > /etc/apt/sources.list.d/darktable.list
+# darktable
+curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_20.04/Release.key | apt-key add -
+echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_20.04/ /" > /etc/apt/sources.list.d/darktable.list
 
 # mkvtoolnix
 curl -L https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add -
