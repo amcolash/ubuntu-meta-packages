@@ -99,8 +99,8 @@ deb http://linux.teamviewer.com/deb stable main
 EOF
 
 # Etcher
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-echo "deb https://deb.etcher.io stable etcher" > /etc/apt/sources.list.d/balena-etcher.list
+curl -1sLf "https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key" | apt-key add -
+echo "deb https://dl.cloudsmith.io/public/balena/etcher/deb/linuxmint ulyssa main" > /etc/apt/sources.list.d/balena-etcher.list
 
 ############ FINISHING UP ############
 
