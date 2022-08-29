@@ -10,13 +10,13 @@ echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /et
 
 # Papirus Icon Theme
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9461999446FAF0DF770BFC9AE58A9D36647CAE7F
-echo "deb http://ppa.launchpad.net/papirus/papirus-dev/ubuntu focal main" > /etc/apt/sources.list.d/papirus.list
+echo "deb http://ppa.launchpad.net/papirus/papirus-dev/ubuntu jammy main" > /etc/apt/sources.list.d/papirus.list
 
 ############ DEV ############
 
-# node 12.x
+# node 16.x
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-echo 'deb https://deb.nodesource.com/node_12.x focal main' > /etc/apt/sources.list.d/nodesource.list
+echo 'deb https://deb.nodesource.com/node_16.x jammy main' > /etc/apt/sources.list.d/nodesource.list
 
 # vs code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -26,15 +26,15 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] http
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/docker-ce.list
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" > /etc/apt/sources.list.d/docker-ce.list
 
 # ubuntu make
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2A8F89B722D1D6630348601343FDBC385ADA701F
-echo "deb http://ppa.launchpad.net/lyzardking/ubuntu-make/ubuntu focal main " > /etc/apt/sources.list.d/ubuntu-make.list
+echo "deb http://ppa.launchpad.net/lyzardking/ubuntu-make/ubuntu jammy main " > /etc/apt/sources.list.d/ubuntu-make.list
 
 # android studio
 # apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
-# echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal main" > /etc/apt/sources.list.d/android-studio.list
+# echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu jammy main" > /etc/apt/sources.list.d/android-studio.list
 
 ############ MEDIA ############
 
@@ -48,7 +48,7 @@ echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_
 
 # mkvtoolnix
 curl -L https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add -
-echo "deb https://mkvtoolnix.download/ubuntu/ focal main" > /etc/apt/sources.list.d/mkvtoolnix.list
+echo "deb https://mkvtoolnix.download/ubuntu/ jammy main" > /etc/apt/sources.list.d/mkvtoolnix.list
 
 # steam
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
@@ -57,13 +57,13 @@ echo "deb-src [arch=amd64,i386] http://repo.steampowered.com/steam/ precise stea
 
 # High Quality Bluetooth Codecs
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 252843F425723ACAADF94155ABF911E15B285843
-echo "deb http://ppa.launchpad.net/berglh/pulseaudio-a2dp/ubuntu focal main" > /etc/apt/sources.list.d/pulseaudio-a2dp.list
+echo "deb http://ppa.launchpad.net/berglh/pulseaudio-a2dp/ubuntu jammy main" > /etc/apt/sources.list.d/pulseaudio-a2dp.list
 
 ############ UTIL ############
 
 # Arronax
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E53B0E36210D2EDBFA94E8AB5AF549300FEB6DD9
-echo "deb http://ppa.launchpad.net/diesch/stable/ubuntu focal main" > /etc/apt/sources.list.d/diesch.list
+echo "deb http://ppa.launchpad.net/diesch/stable/ubuntu jammy main" > /etc/apt/sources.list.d/diesch.list
 
 # Slack
 curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey | apt-key add -
