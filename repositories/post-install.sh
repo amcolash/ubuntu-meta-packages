@@ -28,18 +28,10 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] http
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" > /etc/apt/sources.list.d/docker-ce.list
 
-# ubuntu make
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2A8F89B722D1D6630348601343FDBC385ADA701F
-echo "deb http://ppa.launchpad.net/lyzardking/ubuntu-make/ubuntu jammy main " > /etc/apt/sources.list.d/ubuntu-make.list
-
-# android studio
-# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
-# echo "deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu jammy main" > /etc/apt/sources.list.d/android-studio.list
-
 ############ MEDIA ############
 
 # spotify
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | apt-key add -
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 5E3C45D7B312C643
 echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify.list
 
 # darktable
@@ -53,11 +45,10 @@ echo "deb https://mkvtoolnix.download/ubuntu/ jammy main" > /etc/apt/sources.lis
 # steam
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
 echo "deb [arch=amd64,i386] http://repo.steampowered.com/steam/ precise steam" > /etc/apt/sources.list.d/steam.list
-echo "deb-src [arch=amd64,i386] http://repo.steampowered.com/steam/ precise steam" >> /etc/apt/sources.list.d/steam.list
 
 # High Quality Bluetooth Codecs
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 252843F425723ACAADF94155ABF911E15B285843
-echo "deb http://ppa.launchpad.net/berglh/pulseaudio-a2dp/ubuntu jammy main" > /etc/apt/sources.list.d/pulseaudio-a2dp.list
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 252843F425723ACAADF94155ABF911E15B285843
+# echo "deb http://ppa.launchpad.net/berglh/pulseaudio-a2dp/ubuntu jammy main" > /etc/apt/sources.list.d/pulseaudio-a2dp.list
 
 ############ UTIL ############
 
@@ -98,9 +89,25 @@ deb http://linux.teamviewer.com/deb stable main
 # deb http://linux.teamviewer.com/deb development main
 EOF
 
+# Albert
+curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list
+
 # Etcher
 curl -1sLf "https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key" | apt-key add -
 echo "deb https://dl.cloudsmith.io/public/balena/etcher/deb/linuxmint ulyssa main" > /etc/apt/sources.list.d/balena-etcher.list
+
+# Discord
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 08633B4AAAEB49FC
+echo "deb [arch=amd64] https://ppa.javinator9889.com all main" > /etc/apt/sources.list.d/javinator9889-ppa.list
+
+# Howdy
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2802FD7D4CBF1B050BDE8F3D8CEBC97F3E9E1D58
+echo "deb http://ppa.launchpad.net/boltgolt/howdy/ubuntu jammy main" > /etc/apt/sources.list.d/boltgolt-howdy-focal.list
+
+# Tuxedo
+curl -fsSL https://deb.tuxedocomputers.com/0x54840598.pub.asc | apt-key add -
+echo "deb https://deb.tuxedocomputers.com/ubuntu jammy main" > /etc/apt/sources.list.d/tuxedo.list
 
 ############ FINISHING UP ############
 
