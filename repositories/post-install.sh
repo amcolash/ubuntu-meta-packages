@@ -35,12 +35,12 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 5E3C45D7B312C6
 echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify.list
 
 # darktable
-curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_20.04/Release.key | apt-key add -
-echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_20.04/ /" > /etc/apt/sources.list.d/darktable.list
+curl -L https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_22.04/Release.key | apt-key add -
+echo "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_22.04/ /" > /etc/apt/sources.list.d/darktable.list
 
 # mkvtoolnix
 curl -L https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add -
-echo "deb https://mkvtoolnix.download/ubuntu/ jammy main" > /etc/apt/sources.list.d/mkvtoolnix.list
+echo "deb [arch=amd64] https://mkvtoolnix.download/ubuntu/ jammy main" > /etc/apt/sources.list.d/mkvtoolnix.list
 
 # steam
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7

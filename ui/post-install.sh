@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change papirus folder colors to green
+papirus-folders -C green --theme Papirus-Dark
+
 # Install additional MS fonts, all based off of this article:
 # https://needforbits.wordpress.com/2017/07/19/install-microsoft-windows-fonts-on-ubuntu-the-ultimate-guide/
 
