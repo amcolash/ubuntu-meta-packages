@@ -12,13 +12,11 @@ if [ ! $(getent group docker) ]; then
   if [ $(getent passwd amcolash) ] ; then
     usermod -aG docker amcolash
   fi
-
-  # update docker group
-  newgrp docker
 fi
 
 # start docker on boot
-systemctl enable docker
+systemctl enable docker.service
+systemctl enable containerd.service
 
 # install compose if needed
 if ! [ -x "$(command -v docker-compose)" ]; then
@@ -27,3 +25,5 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   chmod +x /usr/local/bin/docker-compose
   ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 fi
+
+echo "Docker install complete. Make sure to reboot before using docker."
