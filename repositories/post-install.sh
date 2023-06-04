@@ -14,9 +14,9 @@ echo "deb http://ppa.launchpad.net/papirus/papirus-dev/ubuntu jammy main" > /etc
 
 ############ DEV ############
 
-# node 16.x
+# node 18.x
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-echo 'deb https://deb.nodesource.com/node_16.x jammy main' > /etc/apt/sources.list.d/nodesource.list
+echo 'deb https://deb.nodesource.com/node_18.x jammy main' > /etc/apt/sources.list.d/nodesource.list
 
 # vs code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
