@@ -1,8 +1,7 @@
 version: '3.2'
 services:
-  ubuntu:
-    image: amcolash/ubuntu-test
-    container_name: ubuntu
+  ubuntu_meta:
+    container_name: ubuntu_meta
     build: .
     volumes:
       - ../deb:/deb
