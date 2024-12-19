@@ -5,11 +5,11 @@ if [ ! $(getent group docker) ]; then
   groupadd docker
 
   # Add ME to the docker group. Not great practice for a package, but meh
-  if [ $(getent passwd andrew) ] ; then
+  if [ $(getent passwd andrew) ]; then
     usermod -aG docker andrew
   fi
 
-  if [ $(getent passwd amcolash) ] ; then
+  if [ $(getent passwd amcolash) ]; then
     usermod -aG docker amcolash
   fi
 fi
@@ -18,12 +18,11 @@ fi
 systemctl enable docker.service
 systemctl enable containerd.service
 
-# install compose if needed
-if ! [ -x "$(command -v docker-compose)" ]; then
-  curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  curl -L https://raw.githubusercontent.com/docker/compose/1.25.5/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
-  chmod +x /usr/local/bin/docker-compose
-  ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-fi
-
 echo "Docker install complete. Make sure to reboot before using docker."
+
+# Remind to install node via nvm (user specific)
+echo "---------------------------------------"
+echo "Don't forget to install nvm and nodejs"
+echo "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash"
+echo "nvm install --lts && nvm use --lts"
+echo "---------------------------------------"
